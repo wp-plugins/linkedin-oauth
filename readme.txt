@@ -6,7 +6,7 @@ Tested up to: 4.1
 Stable tag: 0.1.0
 License: GPLv2 or later
 
-Linkedin_Oauth allows users to login into your wordpress using their linkedin account, it will set a login button on your login page and uses a shortcode to put the button wherever you want it to show.
+Linkedin_Oauth allows users to login/register into your wordpress using their linkedin account, uses shortcodes.
 
 == Description ==
 
