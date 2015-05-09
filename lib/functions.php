@@ -234,7 +234,9 @@ function clean_scriptslkd($url) {
 add_action('init', 'session_initlkd');
 
 function session_initlkd() {
-
+	if (isset($_GET['noheader'])) {
+		require_once ABSPATH . 'wp-admin/admin-header.php';
+	}
 if (isset($_REQUEST['state'])) {
 
 $state = clean_scriptslkd($_REQUEST['state']);
