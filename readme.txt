@@ -3,7 +3,7 @@ Contributors: k2klettern
 Tags: linkedin, linkedin-api, social, login, oauth2
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 0.1.0
+Stable tag: 0.1.3
 License: GPLv2 or later
 
 Linkedin_Oauth allows users to login/register into your wordpress using their linkedin account, uses shortcodes.
@@ -33,3 +33,15 @@ Upload the Linkedin_Oauth plugin to your blog, Activate it, then enter your id a
 *Release Date - 05th July, 2015*
 
 * First Release
+
+= 0.1.2 =
+*Release Date - 20 May, 2015*
+
+* Change of fullprofile request for basicprofile request on the URL call to Linkedin as per new linkedin API rules
+* Deleted some image convertion function that didn't work in certain servers
+* It will not show the button until you enter at least id and secret keys
+
+= 0.1.3 =
+*Release Date - 16 Jun, 2015*
+
+*Added .pot file for translations and Spanish language for admin, also Spanish text button
