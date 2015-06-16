@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: linkedin-oauth\n"
+"POT-Creation-Date: 2015-06-16 12:47+0100\n"
+"PO-Revision-Date: 2015-06-16 12:47+0100\n"
+"Last-Translator: Eric Zeidan <k2klettern@gmail.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../lib/functions.php:271
+msgid "You are making a not valid call"
+msgstr ""
+
+#: ../lib/functions.php:342
+msgid "Your Linkedin account doesn't match any user on this page"
+msgstr ""
+
+#: ../lib/functions.php:359
+msgid "Error: No access token from Linkedin"
+msgstr ""
+
+#: ../linkedin_oauth.php:32
+msgid "Hi there!  I'm just a plugin, not much I can do when called directly."
+msgstr ""
+
+#: ../linkedin_oauth.php:91
+msgid "You are not authorized to view this page."
+msgstr ""
+
+#: ../linkedin_oauth.php:120
+msgid "settings saved."
+msgstr ""
+
+#: ../linkedin_oauth.php:124
+msgid "Error - Url does not seems to be correct."
+msgstr ""
+
+#: ../linkedin_oauth.php:128
+msgid "Linkedin Button with Oauth2"
+msgstr ""
+
+#: ../linkedin_oauth.php:129
+msgid "by Eric Zeidan"
+msgstr ""
+
+#: ../linkedin_oauth.php:130
+msgid ""
+"First at all, go to https://www.linkedin.com/secure/developer and create a "
+"new Application"
+msgstr ""
+
+#: ../linkedin_oauth.php:131
+msgid ""
+"Then enter the id and secret codes from your Application bellow, and save "
+"the changes"
+msgstr ""
+
+#: ../linkedin_oauth.php:135
+msgid "Client ID: "
+msgstr ""
+
+#: ../linkedin_oauth.php:139
+msgid "Client Secret: "
+msgstr ""
+
+#: ../linkedin_oauth.php:143
+msgid ""
+"Important: Make sure you have entered as authorized Url redirect, the "
+"following URI: "
+msgstr ""
+
+#: ../linkedin_oauth.php:147
+msgid "URL to redirect After Login: "
+msgstr ""
+
+#: ../linkedin_oauth.php:149
+msgid "If leaving blank will redirect to wp-admin page."
+msgstr ""
+
+#: ../linkedin_oauth.php:152
+msgid "Check to allow user registration "
+msgstr ""
+
+#: ../linkedin_oauth.php:157
+msgid ""
+"If allow user registration, a user will be created after login with "
+"Linkedin, if doesn\\t exists on the site."
+msgstr ""
+
+#: ../linkedin_oauth.php:158
+msgid ""
+"Linkedin user's thumbnails will be saved on uploads/avatars for your use"
+msgstr ""
+
+#: ../linkedin_oauth.php:164
+msgid "Shorcode use  [linkedinbtn]"
+msgstr ""
+
+#: ../linkedin_oauth.php:165
+msgid ""
+"To use the shorcode option into a Widget you have to add the following line "
+"to your functions.php into your theme add_filter('widget_text', "
+"'do_shortcode'); and then add [linkedinbtn] inside a text widget"
+msgstr ""
+
+#: ../linkedin_oauth.php:167
+msgid ""
+"To add the linkedin button directly to your php code, you can use "
+"do_shortcode('[linkedinbtn]');\twhatever you want to show it"
+msgstr ""
+
+#: ../linkedin_oauth.php:169
+msgid "To add it as a shorcode, just add [linkedinbtn]"
+msgstr ""
