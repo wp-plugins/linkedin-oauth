@@ -1,4 +1,5 @@
 <?php
+
 function checkVar($var) {
 	$check = false;
 

@@ -3,7 +3,7 @@
 Plugin Name: Linkedin_Oauth
 Plugin URI: http://zeidan.info/linkedin_oauth-wordpress-plugin/
 Description: Linkedin login button with Oauth
-Version: 0.1.1
+Version: 0.1.3
 Author: Eric Zeidan
 Author URI: http://zeidan.es
 License: GPL2
@@ -25,10 +25,17 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+add_action('plugins_loaded', 'linkedinoauth_text');
+
+function linkedinoauth_text() {
+	load_plugin_textdomain('linkedin_oauth', false, basename(dirname(__FILE__)) . '/langs');
+}
+
 require_once 'lib/functions.php';
+
 // Make sure we don't expose any info if called directly
 if (!function_exists('add_action')) {
-	_e('Hi there!  I\'m just a plugin, not much I can do when called directly.');
+	_e('Hi there!  I\'m just a plugin, not much I can do when called directly.', 'linkedin_oauth');
 	exit;
 }
 
@@ -69,7 +76,8 @@ function shortcode_lkdbutton() {
  		<img src="<?php echo plugins_url('img/bck_button.png', __FILE__);?> " alt="Sign in with linkedin">
  		<?php } else {?>
 		<img src="<?php echo plugins_url('img/bck_button_en.png', __FILE__);?> " alt="Sign in with linkedin">
-		<?php }?>
+		<?php }
+		?>
 	</a>
 	</div>
 <?php
@@ -87,7 +95,7 @@ function linkedin_setup_menu() {
 function linkedin_init() {
 
 	if (!current_user_can('manage_options')) {
-		wp_die(_e('You are not authorized to view this page.'));
+		wp_die(_e('You are not authorized to view this page.', 'linkedin_oauth'));
 	}
 
 	$opt_name_clientid = 'wp_lkd_clientid';
@@ -116,61 +124,57 @@ function linkedin_init() {
 			update_option($opt_name_urlafter, $opt_val_urlafter);
 			update_option($opt_name_register, $opt_val_register);
 			?>
-					            <div class="updated"><p><strong><?php _e('settings saved.');?></strong></p></div>
+					            <div class="updated"><p><strong><?php _e('settings saved.', 'linkedin_oauth');?></strong></p></div>
 					        <?php
 } else {
 			?>
-					        	<div class="error"><p><strong><?php _e('Error - Url does not seems to be correct.');?></strong></p></div>
+					        	<div class="error"><p><strong><?php _e('Error - Url does not seems to be correct.', 'linkedin_oauth');?></strong></p></div>
 					        	<?php
 }
-	}?>
-			        <h1><?php _e('Linkedin Button with Oauth2');?></h1>
-			        <p><span><?php _e('by Eric Zeidan');?></span><p>
-			        <p><?php _e('First at all, go to https://www.linkedin.com/secure/developer and create a new Application');?></p>
-			        <p><?php _e('Then enter the id and secret codes from your Application bellow, and save the changes');?></p>
+	}
+	?>
+			        <h1><?php _e('Linkedin Button with Oauth2', 'linkedin_oauth');?></h1>
+			        <p><span><?php _e('by Eric Zeidan', 'linkedin_oauth');?></span><p>
+			        <p><?php _e('First at all, go to https://www.linkedin.com/secure/developer and create a new Application', 'linkedin_oauth');?></p>
+			        <p><?php _e('Then enter the id and secret codes from your Application bellow, and save the changes', 'linkedin_oauth');?></p>
 			        <form name="form1" method="post" action="">
 					            <input type="hidden" name="<?php echo $hidden_field_name;?>" value="23hH2098KK_12">
 					            <p>
-					                <label for="<?php echo $data_field_name_clientid;?>"><?php _e('Client ID: ');?></label><br />
+					                <label for="<?php echo $data_field_name_clientid;?>"><?php _e('Client ID: ', 'linkedin_oauth');?></label><br />
 					                <input type="text" id="<?php echo $data_field_name_clientid;?>" name="<?php echo $data_field_name_clientid;?>" value="<?php echo $opt_val_clientid;?>" size="120" />
 					            </p>
 					            <p>
-					                <label for="<?php echo $data_field_name_clientsecret;?>"><?php _e('Client Secret: ');?></label><br />
+					                <label for="<?php echo $data_field_name_clientsecret;?>"><?php _e('Client Secret: ', 'linkedin_oauth');?></label><br />
 					                <input type="text" id="<?php echo $data_field_name_clientsecret;?>" name="<?php echo $data_field_name_clientsecret;?>" value="<?php echo $opt_val_clientsecret;?>" size="120" />
 					            </p>
 					            <p>
-					            	<h4><?php _e('Important: Make sure you have entered as authorized Url redirect, the following URI: ');
+					            	<h4><?php _e('Important: Make sure you have entered as authorized Url redirect, the following URI: ', 'linkedin_oauth');
 	echo $url_redirect;?></h4>
 					            </p>
 					            <p>
-					                <label for="<?php echo $data_field_name_urlafter;?>"><?php _e('URL to redirect After Login: ');?></label><br />
+					                <label for="<?php echo $data_field_name_urlafter;?>"><?php _e('URL to redirect After Login: ', 'linkedin_oauth');?></label><br />
 					                <input type="text" id="<?php echo $data_field_name_urlafter;?>" name="<?php echo $data_field_name_urlafter;?>" value="<?php echo $opt_val_urlafter;?>" size="120" placeholder="http://www.example.com/page/" />
-					            	<p><span> <?php _e('If leaving blank will redirect to wp-admin page.');?> </span></p>
+					            	<p><span> <?php _e('If leaving blank will redirect to wp-admin page.', 'linkedin_oauth');?> </span></p>
 					            </p>
 					            <p>
-					                <label for="<?php echo $data_field_name_register;?>"><?php _e('Check to allow user registration ');?>
+					                <label for="<?php echo $data_field_name_register;?>"><?php _e('Check to allow user registration ', 'linkedin_oauth');?>
 					                <input type="checkbox" id="<?php echo $data_field_name_register;?>" name="<?php echo $data_field_name_register;?>" <?php if ($opt_val_register) {
 		echo 'checked="checked"';
 	}
 	?> /></label>
-					            	<p><span> <?php _e('If allow user registration, a user will be created after login with Linkedin, if doesn\t exists on the site.');?> </span></p>
-					            	<p><span> <?php _e('Linkedin user\'s thumbnails will be saved on uploads/avatars for your use');?> </span></p>
+					            	<p><span> <?php _e('If allow user registration, a user will be created after login with Linkedin, if doesn\t exists on the site.', 'linkedin_oauth');?> </span></p>
+					            	<p><span> <?php _e('Linkedin user\'s thumbnails will be saved on uploads/avatars for your use', 'linkedin_oauth');?> </span></p>
 					            </p>
 					            <p class="submit">
                 				<input type="submit" name="Submit" class="button-primary" value="<?php esc_attr_e('Save Changes')?>" />
             					</p>
         				</form>
-        				<h3><?php _e('Shorcode use  [linkedinbtn]');?></h3>
-						<p><?php _e('To use the shorcode option into a Widget you have to add the following line to your functions.php into your theme
-						add_filter(\'widget_text\', \'do_shortcode\');
-						and then add [linkedinbtn] inside a text widget');?></p>
+        				<h3><?php _e('Shorcode use  [linkedinbtn]', 'linkedin_oauth');?></h3>
+						<p><?php _e('To use the shorcode option into a Widget you have to add the following line to your functions.php into your theme add_filter(\'widget_text\', \'do_shortcode\'); and then add [linkedinbtn] inside a text widget', 'linkedin_oauth');?></p>
 
-						<p><?php _e('To add the linkedin button directly to your php code, you can use
-						do_shortcode(\'[linkedinbtn]\');
-						whatever you want to show it');?></p>
+						<p><?php _e('To add the linkedin button directly to your php code, you can use do_shortcode(\'[linkedinbtn]\');	whatever you want to show it', 'linkedin_oauth');?></p>
 
-						<p><?php _e('To add it as a shorcode, just add
-						[linkedinbtn]');?></p>
+						<p><?php _e('To add it as a shorcode, just add [linkedinbtn]', 'linkedin_oauth');?></p>
 <?php
 }
 ?>
