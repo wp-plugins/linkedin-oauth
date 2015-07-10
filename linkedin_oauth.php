@@ -3,7 +3,7 @@
 Plugin Name: Linkedin_Oauth
 Plugin URI: http://zeidan.info/linkedin_oauth-wordpress-plugin/
 Description: Linkedin login button with Oauth
-Version: 0.1.3
+Version: 0.1.4
 Author: Eric Zeidan
 Author URI: http://zeidan.es
 License: GPL2
@@ -170,7 +170,8 @@ function linkedin_init() {
             					</p>
         				</form>
         				<h3><?php _e('Shorcode use  [linkedinbtn]', 'linkedin_oauth');?></h3>
-						<p><?php _e('To use the shorcode option into a Widget you have to add the following line to your functions.php into your theme add_filter(\'widget_text\', \'do_shortcode\'); and then add [linkedinbtn] inside a text widget', 'linkedin_oauth');?></p>
+
+						<p><?php _e('To put your button in a Widget use our Widget "Linkedin Oauth Widget", where you can add a Title and a Description to your Button', 'linkedin_oauth');?></p>
 
 						<p><?php _e('To add the linkedin button directly to your php code, you can use do_shortcode(\'[linkedinbtn]\');	whatever you want to show it', 'linkedin_oauth');?></p>
 

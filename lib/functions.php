@@ -356,4 +356,9 @@ function session_initlkd() {
 		}
 	} //endif
 } //end session_init
-?>
+
+function linkedinoauth_create_widget() {
+	include_once plugin_dir_path(__FILE__) . 'widget.php';
+	register_widget('linkedinoauth_widget');
+}
+add_action('widgets_init', 'linkedinoauth_create_widget');
