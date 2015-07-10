@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: linkedin_oauth\n"
-"POT-Creation-Date: 2015-06-16 13:11+0100\n"
-"PO-Revision-Date: 2015-06-16 13:19+0100\n"
+"POT-Creation-Date: 2015-07-10 12:27+0100\n"
+"PO-Revision-Date: 2015-07-10 12:28+0100\n"
 "Last-Translator: Eric Zeidan <k2klettern@gmail.com>\n"
 "Language-Team: none <k2klettern@gmail.com>\n"
 "Language: es_ES\n"
@@ -30,33 +30,41 @@ msgstr ""
 msgid "Error: No access token from Linkedin"
 msgstr "Error: El token de acceso de Linkedin no existe"
 
-#: ../linkedin_oauth.php:37
+#: ../lib/widget.php:40
+msgid "Title"
+msgstr "Titulo"
+
+#: ../lib/widget.php:44
+msgid "Description"
+msgstr "Descripción"
+
+#: ../linkedin_oauth.php:38
 msgid "Hi there!  I'm just a plugin, not much I can do when called directly."
 msgstr ""
 "Hola! Solo soy un Plugin, no hay mucho que puedas hacer llamándome "
 "directamente."
 
-#: ../linkedin_oauth.php:96
+#: ../linkedin_oauth.php:98
 msgid "You are not authorized to view this page."
 msgstr "No estas autorizado a ver esta página."
 
-#: ../linkedin_oauth.php:125
+#: ../linkedin_oauth.php:127
 msgid "settings saved."
 msgstr "Configuración guardada."
 
-#: ../linkedin_oauth.php:129
+#: ../linkedin_oauth.php:131
 msgid "Error - Url does not seems to be correct."
 msgstr "Error - La Url no parece ser la correcta."
 
-#: ../linkedin_oauth.php:133
+#: ../linkedin_oauth.php:136
 msgid "Linkedin Button with Oauth2"
 msgstr "Botón de Linkedin con Oauth2"
 
-#: ../linkedin_oauth.php:134
+#: ../linkedin_oauth.php:137
 msgid "by Eric Zeidan"
 msgstr "por Eric Zeidan"
 
-#: ../linkedin_oauth.php:135
+#: ../linkedin_oauth.php:138
 msgid ""
 "First at all, go to https://www.linkedin.com/secure/developer and create a "
 "new Application"
@@ -64,7 +72,7 @@ msgstr ""
 "Primeramente, ve a https://www.linkedin.com/secure/developer y crea una "
 "nueva Aplicación"
 
-#: ../linkedin_oauth.php:136
+#: ../linkedin_oauth.php:139
 msgid ""
 "Then enter the id and secret codes from your Application bellow, and save "
 "the changes"
@@ -72,15 +80,15 @@ msgstr ""
 "Luego entra el id y el código secreto de tu aplicación abajo, y guarda los "
 "cambios."
 
-#: ../linkedin_oauth.php:140
+#: ../linkedin_oauth.php:143
 msgid "Client ID: "
 msgstr "ID de Cliente:"
 
-#: ../linkedin_oauth.php:144
+#: ../linkedin_oauth.php:147
 msgid "Client Secret: "
 msgstr "Código Secreto:"
 
-#: ../linkedin_oauth.php:148
+#: ../linkedin_oauth.php:151
 msgid ""
 "Important: Make sure you have entered as authorized Url redirect, the "
 "following URI: "
@@ -88,19 +96,19 @@ msgstr ""
 "Importante: Asegúrate que haz introducido en la URL de redirección "
 "autorizada, la siguiente URL:"
 
-#: ../linkedin_oauth.php:152
+#: ../linkedin_oauth.php:155
 msgid "URL to redirect After Login: "
 msgstr "URL para redireccionar luego del Login:"
 
-#: ../linkedin_oauth.php:154
+#: ../linkedin_oauth.php:157
 msgid "If leaving blank will redirect to wp-admin page."
 msgstr "Si se deja en blanco, redireccionará a la página wp-admin. "
 
-#: ../linkedin_oauth.php:157
+#: ../linkedin_oauth.php:160
 msgid "Check to allow user registration "
 msgstr "Selecciona para permitir el registro de usuarios"
 
-#: ../linkedin_oauth.php:162
+#: ../linkedin_oauth.php:165
 msgid ""
 "If allow user registration, a user will be created after login with "
 "Linkedin, if doesn\\t exists on the site."
@@ -108,29 +116,26 @@ msgstr ""
 "Si permites el registro de usuarios, un usuario será creado luego que "
 "accedas con Linkedin, si no existe en el sitio."
 
-#: ../linkedin_oauth.php:163
+#: ../linkedin_oauth.php:166
 msgid ""
 "Linkedin user's thumbnails will be saved on uploads/avatars for your use"
 msgstr ""
 "La foto de usuario de Linkedin será guardada en uploads/avatars para su "
 "posterior uso"
 
-#: ../linkedin_oauth.php:169
+#: ../linkedin_oauth.php:172
 msgid "Shorcode use  [linkedinbtn]"
 msgstr "Para usar Shorcode [linkedinbtn]"
 
-#: ../linkedin_oauth.php:170
+#: ../linkedin_oauth.php:174
 msgid ""
-"To use the shorcode option into a Widget you have to add the following line "
-"to your functions.php into your theme add_filter('widget_text', "
-"'do_shortcode'); and then add [linkedinbtn] inside a text widget"
+"To put your button in a Widget use our Widget \"Linkedin Oauth Widget\", "
+"where you can add a Title and a Description to your Button"
 msgstr ""
-"Para usar la opción de shorcode dentro de un widget, tienes que añadir la "
-"siguiente linea en el functions.php dentro de tu tema "
-"add_filter('widget_text', 'do_shortcode'); y luego agrega [linkedinbtn] "
-"dentro de un widget tipo texto"
+"Para colocar el botón dentro de un Widget, usa el widget \"Linkedin Oauth "
+"Widget\", donde podrás añadir Titulo y Decripción al mismo"
 
-#: ../linkedin_oauth.php:172
+#: ../linkedin_oauth.php:176
 msgid ""
 "To add the linkedin button directly to your php code, you can use "
 "do_shortcode('[linkedinbtn]');\twhatever you want to show it"
@@ -138,6 +143,16 @@ msgstr ""
 "Para añadir el botón de Linkedin directamente dentro de tu codigo php, "
 "puedes usar do_shortcode('[linkedinbtn]');  donde desees añadirlo"
 
-#: ../linkedin_oauth.php:174
+#: ../linkedin_oauth.php:178
 msgid "To add it as a shorcode, just add [linkedinbtn]"
 msgstr "Para añadirlo como shortcode, simplemente usa [linkedinbtn]"
+
+#~ msgid ""
+#~ "To use the shorcode option into a Widget you have to add the following "
+#~ "line to your functions.php into your theme add_filter('widget_text', "
+#~ "'do_shortcode'); and then add [linkedinbtn] inside a text widget"
+#~ msgstr ""
+#~ "Para usar la opción de shorcode dentro de un widget, tienes que añadir la "
+#~ "siguiente linea en el functions.php dentro de tu tema "
+#~ "add_filter('widget_text', 'do_shortcode'); y luego agrega [linkedinbtn] "
+#~ "dentro de un widget tipo texto"
