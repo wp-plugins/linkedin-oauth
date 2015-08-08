@@ -2,10 +2,10 @@
  
 class linkedinoauth_widget extends WP_Widget {
  
-    function linkedinoauth_widget(){
+    function __construct(){
         // Constructor del Widget
         $widget_ops = array('classname' => 'linkedinoauth_widget', 'description' => "Show Linkedin login button in a Widget" );
-        $this->WP_Widget('linkedinoauth_widget', "Linkedin Oauth Widget", $widget_ops);
+        parent::__construct('linkedinoauth_widget', "Linkedin Oauth Widget", $widget_ops);
     }
  
     function widget($args,$instance){

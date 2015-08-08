@@ -3,7 +3,7 @@ Contributors: k2klettern
 Tags: linkedin, linkedin-api, social, loggin, oauth2, button, widget, oauth
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 0.1.4
+Stable tag: 0.1.5
 License: GPLv2 or later
 
 Linkedin_Oauth allows users to login/register into your wordpress using their linkedin account, uses shortcodes.
@@ -57,3 +57,8 @@ Upload the Linkedin_Oauth plugin to your blog, Activate it, then enter your id a
 *Release Date - 10n Jul, 2015*
 
 *Added a Widget to put the login button, provides Title and Description Fields
+
+= 0.1.5 =
+*Release Date - 08 Aug, 2015*
+
+*Change functions in order to work with WP4.3

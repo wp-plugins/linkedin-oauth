@@ -3,7 +3,7 @@
 Plugin Name: Linkedin_Oauth
 Plugin URI: http://zeidan.info/linkedin_oauth-wordpress-plugin/
 Description: Linkedin login button with Oauth
-Version: 0.1.4
+Version: 0.1.5
 Author: Eric Zeidan
 Author URI: http://zeidan.es
 License: GPL2
